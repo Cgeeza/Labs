@@ -80,7 +80,5 @@ hist(met$wind.sp, breaks = 100)
 hist(met$temp)
 hist(met$wind.sp)
 
-leaflet(elev) |>
-  addProviderTiles('OpenStreetMap') |>
-  addCircles(lat=~lat,lng=~lon, opacity=1, fillOpacity=1, radius=100)
+
 ```
