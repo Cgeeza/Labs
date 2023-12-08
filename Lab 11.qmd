@@ -5,7 +5,7 @@ format: html
 editor: visual
 ---
 
-## 1. 
+## 1.
 
 ```{r}
 library(readr)
@@ -21,7 +21,7 @@ cv_states <- merge(cv_states, state_pops, by="state")
 
 ```
 
-## 2. 
+## 2.
 
 ```{r}
 dim(cv_states)
@@ -132,7 +132,7 @@ p2<-ggplot(cv_states, aes(x = date, y = new_deaths, color = state)) +
 ggplotly(p2)
 ```
 
-## 5. 
+## 5.
 
 ```{r}
 ### FINISH CODE HERE
@@ -149,7 +149,7 @@ cv_states = cv_states %>% mutate(naive_CFR = round((deaths*100/cases),2))
 cv_states_today = subset(cv_states, date==max(cv_states$date))
 ```
 
-## 6. 
+## 6.
 
 ```{r}
 # pop_density vs. cases
@@ -187,7 +187,7 @@ cv_states_today_filter %>%
 
 ```
 
-## 7. 
+## 7.
 
 ```{r}
 p <- ggplot(cv_states_today_filter, aes(x=pop_density, y=deathsper100k,
@@ -199,7 +199,7 @@ cor(cv_states_today_filter$pop_density, cv_states_today_filter$deathsper100k,
     use="pairwise.complete.obs")
 ```
 
-## 8. 
+## 8.
 
 ```{r}
 plot_ly(cv_states, x = ~date, y = ~naive_CFR, color = ~state, type = "scatter",
@@ -259,7 +259,7 @@ plot_ly(x=colnames(cv_states_mat2), y=rownames(cv_states_mat2),
         showscale=T)
 ```
 
-## 10. 
+## 10.
 
 ```{r}
 ### For specified date
